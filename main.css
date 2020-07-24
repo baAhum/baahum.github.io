@@ -241,6 +241,7 @@ p {
     padding-top: 65px;
     padding-bottom: 20px;
     z-index: 999;
+    overflow-x: hidden;
 }
 
 /* #innerBody div {
