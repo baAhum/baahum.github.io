@@ -130,6 +130,7 @@ h1 {
     color: white;
     text-transform: uppercase;
     font-family: 'teen';
+    font-size: 2.2em;
     
 }
 
@@ -156,7 +157,7 @@ p {
     padding-right: 30px;
     font-family: "mnrg";
     /* font-family: "irezumi"; */
-    font-size: 30px;
+    font-size: 2em;
     text-align: center;
 }
 
@@ -169,6 +170,7 @@ p {
     width: 100%;
     z-index: 10;
     font-family: "teen";
+    font-size: 2em;
   }
   
   .navbar a {
@@ -183,8 +185,8 @@ p {
   
   .dropdown {
     float: left;
-    position: fixed;
-    margin-left: 150px;
+    position: relative;
+    /* margin-left: 150px; */
     overflow: hidden;
     z-index: 1;
   }
