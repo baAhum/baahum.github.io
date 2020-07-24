@@ -1,0 +1,358 @@
+/* Colours used
+white
+#333   dark grey
+#9f378a dark purple
+
+*/
+
+:root {
+    --div-heights: 400px;
+
+    --main-color:#333;
+    --banner-color: #ccc;
+    --main-background-color: #000;
+    --sidenav-color: #111;
+    --sidenav-text: #818181;
+    --nav-text: white;
+
+    --table-splitters-color: #ddd;
+    --table-evenrows-color: #111;
+    --table-oddrows-color: #222;
+    --table-btn: #666;
+
+    --info-box: #666;
+    --info-box-background: #555;
+    
+    --input-color-no-select: #ddd;
+    --input-color-hover: #eee;
+    --input-color-focus: white;
+
+    --inner-button-hover: linear-gradient(227deg,  rgb(186, 186, 186, 1) 0%,rgb(186, 186, 186, 0.5) 10%, rgb(186, 186, 186, 0.2) 30%, rgb(186, 186, 186, 0.0) 50%);
+
+    --inner-buttonUp-hover: linear-gradient(133deg,  rgb(186, 186, 186, 1) 0%,rgb(186, 186, 186, 0.5) 10%, rgb(186, 186, 186, 0.2) 30%, rgb(186, 186, 186, 0.0) 50%);
+
+    --btn-gradient-image: linear-gradient(
+        to bottom, 
+        #666, 
+        rgba(0, 0, 0, 0)
+      ) 1 100%;
+    --btn-color: #444;
+
+    --scrl-bar: #000;
+}
+
+@font-face {
+    font-family: 'CRIMFBRG';
+    src: url('./fonts/CRIMFBRG.TTF') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  }  
+
+  @font-face {
+    font-family: 'irezumi';
+    src: url('./fonts/irezumi.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  }  
+
+  @font-face {
+    font-family: 'irezumi_I';
+    src: url('./fonts/irezumi_i.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  }  
+
+  @font-face {
+    font-family: 'mnBI';
+    src: url('./fonts/minya\ nouvelle\ bd\ it.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  }  
+
+  @font-face {
+    font-family: 'mnB';
+    src: url('./fonts/minya\ nouvelle\ bd.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  }  
+
+  @font-face {
+    font-family: 'mnI';
+    src: url('./fonts/minya\ nouvelle\ it.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  }  
+
+  @font-face {
+    font-family: 'mnrg';
+    src: url('./fonts/minya\ nouvelle\ rg.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  }  
+
+  @font-face {
+    font-family: 'OlsenI';
+    src: url('./fonts/Miss\ Olsen\'s\ Classroom\ Font\'s-\ Italic.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  }  
+
+  @font-face {
+    font-family: 'Olsen';
+    src: url('./fonts/Miss\ Olsen\'s\ Classroom\ Font\'s.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  }  
+
+  @font-face {
+    font-family: 'teenBI';
+    src: url('./fonts/teen\ bd\ it.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  }  
+  @font-face {
+    font-family: 'teenB';
+    src: url('./fonts/teen\ bd.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  }  
+  @font-face {
+    font-family: 'teen';
+    src: url('./fonts/teen.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  }  
+  @font-face {
+    font-family: 'teenI';
+    src: url('./fonts/teen\ it.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  }  
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--main-background-color);
+    min-width: 420px;
+    width: 100%;
+    color: white;
+}
+
+.unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+ }
+
+h1 {
+    margin: 10px auto 0 auto;
+    height: 50px;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    background-color: var(--main-background-color)!important;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'teen';
+    
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    /* background-color:; */
+    background: transparent;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--scrl-bar);
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background:  var(--main-color);
+    border-radius: 2px;
+  }
+
+p {
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: "mnrg";
+    /* font-family: "irezumi"; */
+    font-size: 30px;
+    text-align: center;
+}
+
+/* Top Banner */
+
+.navbar {
+    overflow: hidden;
+    background-color: var(--main-color);
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    font-family: "teen";
+  }
+  
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+  }
+  
+  .dropdown {
+    float: left;
+    position: fixed;
+    margin-left: 150px;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    /* position: fixed; */
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    transition: 0.2s;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: var(--main-background-color);
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    z-index: 1;
+    /* position: fixed; */
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+    /* position: fixed; */
+  }
+
+/* Inside */
+
+#innerBody {
+    width: 100%;
+    padding-top: 65px;
+    padding-bottom: 20px;
+    z-index: 999;
+}
+
+/* #innerBody div {
+    min-height: 340px;
+} */
+
+#Intro {
+    color: white;
+    /* background-image: url("./photos/Marne.jpg"); */
+    /* background-color: transparent; */
+}
+
+
+
+.note {
+    /* float:none; */
+     display: inline-block;
+     /* margin-top: 5px;
+     margin-bottom: 5px; */
+    height: var(--div-heights);
+    height: auto;
+    width: 65%;
+    /* min-width: 550px; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    /* 30px; */
+    background-position-y: center;
+    box-shadow: 0 0 70px 20px var(--main-background-color) inset;
+    
+}
+
+.imagediv {
+    height: 300px;
+    display: inline-block;
+    height: var(--div-heights);
+    height: auto;
+    width: 30%;
+    /* max-width: ; */
+    /* min-width: 550px; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0 0 30px 20px var(--main-background-color) inset;
+}
+
+.rightF {
+    float: right;
+    margin-right: 20px;
+    margin-left: 0;
+}
+
+.leftF {
+    float: left;
+    margin-left: 20px;
+}
+
+#MarneMain {
+    height: 1000px;
+}
+
+.Message {
+    /* min-height: var(--div-heights); */
+    display: block;
+    height: auto;
+    border-bottom: 2px solid transparent;
+    padding: .5rem;
+    border-radius: 5px;
+    border-image-source: linear-gradient(to right, var(--main-background-color) 0%, #555 40%, #555 60%, var(--main-background-color) 100%); 
+    border-image-slice: 5;
+    padding-bottom: 90px;
+    padding-top: 90px;
+    max-width: 1463px;
+    margin: auto auto
+}
+
+.note .wePhoto {
+    display: flex;
+    max-width: 42.8%;
+  max-height: var(--div-heights);
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.1;
+  /* margin: 40px auto; */
+    display: block;
+    float: inline-start;
+}
+
+
+.letterPhoto {
+    max-width: 100%;
+  max-height: var(--div-heights);
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  /* margin: 40px auto; */
+    /* display: block; */
+    /* float: inline-start; */
+    z-index: 9;
+}
+
+.note .letterPhoto {
+    max-width: 100%;
+}
+
+.imagediv .letterPhoto {
+    max-width: 216.7%;
+}
+
