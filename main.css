@@ -359,3 +359,35 @@ p {
     max-width: 216.7%;
 }
 
+.MarneMemories .letterPhoto {
+  max-width: 100%;
+  max-height: 400px;
+}
+
+#Gallery {
+  width: 95%;
+  margin: auto;
+  /* padding-left: 3%;
+  padding-right: 2%; */
+}
+
+
+.MarneMemories {
+  /* Ratio 0.64 */
+  height: auto;
+  /* height: 500px; */
+  width: 30%;
+  max-width: 220px;
+  max-height: 500px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  display: inline-block;
+  float: left;
+  margin-left: 3px;
+  margin-bottom: 10px;
+  transition: 1s;
+  /* background-color: white; */
+}
+
