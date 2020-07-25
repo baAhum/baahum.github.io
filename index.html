@@ -2,13 +2,18 @@
 <html>
 <head>
     <title>Happy B-Day</title>
-    <link rel="icon" href="img/barIco.png" type="image/png" sizes="50x16">
+    <link rel="icon" href="./Icons/barIco.svg" type="image/svg+xml" sizes="50x16">
     <meta name="theme-color" content="#000">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
 	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
+  <!-- id="bodyMain" onload="Setup()"> -->
+  <audio id="songs">
+    <source src="./songs/Matt.m4a" type="audio/m4a">
+    Your browser does not support the audio element.
+  </audio>
 
   <div class="navbar unselectable">
     <a href="#Intro">Our Message</a>
@@ -40,13 +45,18 @@
       </div>
     </div> 
     <a href="#Gallery"">Marné Gallery</a>
+
+    <div id="audioDiv">
+      <a>Song:</a><marquee id="audioDesc" behavior="scroll" direction="left">No Song Selected</marquee>
+      <div id="playPause" onclick="audioControls()"><img id="audioIco" src="./Icons/play.svg" alt="Play"></div>
+    </div>
   </div>
 
   <div id = "innerBody">
     <div id = "Intro" class="Message" style="padding-top: 80px; padding-bottom: 80px; text-align: center; ">
       <h1>Liefste Marné</h1>
       <p>Hier is 'n klomp handgeskrewe liefdes briewe vir jou, om te wys hoe ongelooflik en waardeer jy is.  Jy is die lig in ons almal se lewens, en jou glimlag straal hoop en liefde uit wat jou Jesus-lig na almal toe uitstraal!</p>
-      <p>So die messages is almal handgeskrewe briewe vir jou, met die mense se gunstelling foto saam of van jou, en as jy stop by hulle brief terwyl dit bo-aan die bladsy is, Sal jy selfs hulle gunstelling liedjie vir jou kan hoor.</p>
+      <p>So die messages is almal handgeskrewe briewe vir jou, met die mense se gunstelling foto saam of van jou, en as jy click op hulle brief of photo, sal jy hulle gunstelling liedjie vir jou kan hoor (en regs bo beheer en sien).</p>
       <p>Hoop jou dag is so ongelooflik soos wat jy elke een van ons se lewens maak.
       </p>
       <img id="MarneMain" src="./photos/Marne.png" alt="Italian Trulli">
@@ -57,7 +67,7 @@
 
     <!-- Far Friends -->
 
-    <div id = "Gabby"  class="Message">
+    <div id = "Gabby"  class="Message" onclick="PlayFriendAudio(this.id)">
       <div class="note" style="background-image: url('./letters/Gabby.png');">
         <img class="letterPhoto" src="./letters/Gabby.png" alt="Italian Trulli">
       </div>
@@ -69,7 +79,7 @@
 
     <!-- Pta Friends -->
 
-    <div id = "Charlize"  class="Message">
+    <div id = "Charlize"  class="Message" onclick="PlayFriendAudio(this.id)">
       <div class="note" style="background-image: url('./letters/Charlize.png');">
         <img class="letterPhoto" src="./letters/Charlize.png" alt="Italian Trulli">
       </div>
@@ -80,7 +90,7 @@
 
     <!-- <div id = "Elize"  class="Message"></div> -->
 
-    <div id = "Symeion"  class="Message">
+    <div id = "Symeion"  class="Message" onclick="PlayFriendAudio(this.id)">
       <div class="note" style="background-image: url('./letters/Symeion.png');">
         <img class="letterPhoto" src="./letters/Symeion.png" alt="Italian Trulli">
       </div>
@@ -95,7 +105,7 @@
 
     <div id = "Wian"  class="Message"></div> -->
 
-    <div id = "Matt"  class="Message">
+    <div id = "Matt"  class="Message" onclick="PlayFriendAudio(this.id)">
       <div class="note" style="background-image: url('./letters/Matt.png');">
         <img class="letterPhoto" src="./letters/Matt.png" alt="Italian Trulli">
       </div>
@@ -108,7 +118,7 @@
 
     <!-- Family -->
 
-    <div id = "Janre"  class="Message">
+    <div id = "Janre"  class="Message" onclick="PlayFriendAudio(this.id)">
       <div class="note" style="background-image: url('./letters/Janre.png');">
         <img class="letterPhoto" src="./letters/Janre.png" alt="Italian Trulli">
       </div>
@@ -119,7 +129,7 @@
 
     <!-- <div id = "Tannie"  class="Message"></div> -->
 
-    <div id = "Ma" class="Message">
+    <div id = "Ma" class="Message" onclick="PlayFriendAudio(this.id)">
       <div class="note" style="background-image: url('./letters/Ma.png');">
         <img class="letterPhoto" src="./letters/Ma.png" alt="Italian Trulli">
       </div>
@@ -128,7 +138,7 @@
       </div>
     </div>
 
-    <div id = "Pa" class="Message">
+    <div id = "Pa" class="Message" onclick="PlayFriendAudio(this.id)">
       <div class="note" style="background-image: url('./letters/Pa.png');">
         <img class="letterPhoto" src="./letters/Pa.png" alt="Italian Trulli">
       </div>

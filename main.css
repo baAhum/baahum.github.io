@@ -236,6 +236,65 @@ p {
     /* position: fixed; */
   }
 
+  #audioDiv {
+    /* width: 350px; */
+    float: right;
+    height: 100%;
+    font-family: inherit;
+
+    border-left: 2px solid transparent;
+    border-radius: 5px;
+    border-image-source: linear-gradient(to bottom, var(--main-color) 0%, var(--main-color) 20%, #555 45%, #555 55%, var(--main-color) 80%, var(--main-color) 100%); 
+    border-image-slice: 5;
+  }
+
+  #audioDiv a{
+    padding-bottom: 0;
+    padding-right: 2px;
+  }
+
+  #audioDiv a:hover{
+    background-color: inherit;
+  }
+
+  #audioDesc
+  {
+    font-size: 1em;  
+    width: 210px;
+    padding-top: 14px;
+    padding-bottom: 0px;
+    font-family: "teen";
+    transition: 0.5s;
+    
+  }
+
+  #playPause img {
+    height: 100%;
+    width: 100%;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  #playPause:hover, #playPause img:hover {
+    fill:#111;
+    color: #000;
+    background-color: var(--main-background-color);
+  }
+
+  #playPause {
+    display: block;
+    float: right;
+    height: 2em;
+    padding-top: 7px;
+    padding-bottom:8px;    
+
+    border-left: 2px solid transparent;
+    border-radius: 5px;
+    border-image-source: linear-gradient(to bottom, var(--main-color) 0%, var(--main-color) 20%, #555 45%, #555 55%, var(--main-color) 80%, var(--main-color) 100%); 
+    border-image-slice: 5;
+    transition: 0.2s;
+  }
+
 /* Inside */
 
 #innerBody {
@@ -387,7 +446,7 @@ p {
   float: left;
   margin-left: 3px;
   margin-bottom: 10px;
-  transition: 2s;
+  transition: 1s;
   /* background-color: white; */
 }
 
