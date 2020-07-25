@@ -23,13 +23,13 @@ function assign_random() {
     var amount_to_change = 4;
 
     if (num<10) {
-        amount_to_change = 4;
-    } else if (num<16) {
         amount_to_change = 5;
-    } else if (num<18) {
+    } else if (num<16) {
         amount_to_change = 6;
-    } else {
+    } else if (num<18) {
         amount_to_change = 7;
+    } else {
+        amount_to_change = 8;
     }
 
     for (var i = 0; i < amount_to_change; i++) {
@@ -50,6 +50,6 @@ function assign_random() {
 
 setInterval(function() {
     assign_random();
-}, 2200);
+}, 4000);
 
 
