@@ -361,7 +361,7 @@ p {
 }
 
 #MarneMain {
-    height: 1000px;
+    height: 800px;
     border-radius: 20px;
     border-image-source: linear-gradient(to right, var(--main-background-color) 0%, #555 40%, #555 60%, var(--main-background-color) 100%); 
     border-image-slice: 5;
