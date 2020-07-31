@@ -1,4 +1,4 @@
-var num_random_img = 92;
+var num_random_img = 95;
 
 var collage_divs = document.getElementsByClassName("MarneMemories");
 var imgAr = [70, 24, 31, 88, 25, 80, 44, 62, 49, 27, 35, 55, 29, 18, 7, 12, 84, 21, 30, 72, 48, 1, 59, 77];
@@ -20,6 +20,7 @@ songs_dict["Symeion"] = "Ride It Out - Jaden Hamilton";
 songs_dict["Matt"] = "Start Of Something Good - Daughtry";
 songs_dict["Janre"] = "Sacred - Citizen Soldier";
 songs_dict["Ma"] = "none";
+songs_dict["Hannah"] = "none";
 songs_dict["Pa"] = "Spirit Lead Me Lyrics - Michael Ketterer";
 
 
