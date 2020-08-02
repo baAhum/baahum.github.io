@@ -1,57 +1,66 @@
 import os
+from PIL import Image
 
-dir_name = r".\MarneOnly"
 
-counter = 1
+def resizeImage(imageLoc, size):
+    im = Image.open(imageLoc)
+    width, height = im.size
 
-for i in os.listdir(dir_name):
-    if ("Marne_87" in i):
+    # if (height<=size):
+    #     print("Already sized")
+    #     return
+    im_resized = im.resize((int((width/height)*size),size), Image.ANTIALIAS)
+    # print(width, height)
+    im_resized.save(imageLoc, dpi=(600,600)) #height, width
+
+def resizeImages():
+    Marne_name = r".\MarneOnly"     #Max height 400px
+    Marne_height = 400
+    letters_name = r".\letters"     #Max height 500px
+    letters_height = 500
+    ind_photos = r".\photos"        #Max height 400px
+    ind_height = 400
+
+    for i in os.listdir(Marne_name):
+        resizeImage(Marne_name + "\\" + i, Marne_height)
+
+    for i in os.listdir(ind_photos):
+        resizeImage(ind_photos + "\\" + i, ind_height)
+
+    for i in os.listdir(letters_name):
+        resizeImage(letters_name + "\\" + i, letters_height)
+
+
+def RenamePhotos():
+    dir_name = r".\MarneOnly"
+
+    # counter = 1
+
+    # for i in os.listdir(dir_name):
+    #     if ("Marne_87" in i):
+    #         counter+=1
+    #         continue
+    #     elif (counter==87):
+    #         counter += 1
+        
+    #     os.rename(dir_name+"\\"+i, dir_name+"\\"+"Marne%s.png"%counter)
+    #     counter+=1
+
+    counter = 103
+    for i in os.listdir(dir_name):
+        if ("Marne_" in i):
+            continue
+
+        if ("Marne_87" in i):
+            counter+=1
+            continue
+        elif (counter==87):
+            counter += 1
+        
+        os.rename(dir_name+"\\"+i, dir_name+"\\"+"Marne_%s.png"%counter)
         counter+=1
-        continue
-    elif (counter==87):
-        counter += 1
-    
-    os.rename(dir_name+"\\"+i, dir_name+"\\"+"Marne%s.png"%counter)
-    counter+=1
 
-counter = 1
-for i in os.listdir(dir_name):
-    if ("Marne_87" in i):
-        counter+=1
-        continue
-    elif (counter==87):
-        counter += 1
-    
-    os.rename(dir_name+"\\"+i, dir_name+"\\"+"Marne_%s.png"%counter)
-    counter+=1
-# aa = """
-# <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_70.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Italian Trulli"></div>
-#       <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_24.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Italian Trulli"></div>
-#       <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_31.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Italian Trulli"></div>
-#       <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_88.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Italian Trulli"></div>
-#       <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_25.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Italian Trulli"></div>
-#       <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_80.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Italian Trulli"></div>
-#       <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_44.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Italian Trulli"></div>
-#       <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_62.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Italian Trulli"></div>
-#       <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_49.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Italian Trulli"></div>
-#       <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_27.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Italian Trulli"></div>
-#       <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_35.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Italian Trulli"></div>
-#       <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_55.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Italian Trulli"></div>
-#       <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_29.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Italian Trulli"></div>
-#       <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_18.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Italian Trulli"></div>
-#       <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_7.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Italian Trulli"></div>
-#       <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_12.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Italian Trulli"></div>
-#       <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_84.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Italian Trulli"></div>
-#       <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_21.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Italian Trulli"></div>
-#       <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_30.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Italian Trulli"></div>
-#       <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_72.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Italian Trulli"></div>
-#       <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_48.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Italian Trulli"></div>
-#       <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_1.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Italian Trulli"></div>
-#       <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_59.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Italian Trulli"></div>
-#       <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_77.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Italian Trulli"></div>"""
+    resizeImages()
 
-# b = aa.split('background-image: url(&quot;./MarneOnly/Marne_')[1:]
-
-# c = [int(i.split('.')[0]) for i in b]
-
-# print(c)
+# resizeImages()
+RenamePhotos()
