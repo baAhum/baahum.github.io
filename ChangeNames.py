@@ -27,8 +27,8 @@ def resizeImages():
     for i in os.listdir(ind_photos):
         resizeImage(ind_photos + "\\" + i, ind_height)
 
-    for i in os.listdir(letters_name):
-        resizeImage(letters_name + "\\" + i, letters_height)
+    # for i in os.listdir(letters_name):
+    #     resizeImage(letters_name + "\\" + i, letters_height)
 
 
 def RenamePhotos():
