@@ -18,10 +18,10 @@ songs_dict["Gabby"] = "Wild Heart - Daughtry";
 songs_dict["Charlize"] = "none";
 songs_dict["Symeion"] = "Ride It Out - Jaden Hamilton";
 songs_dict["Matt"] = "Start Of Something Good - Daughtry";
-songs_dict["Janre"] = "Sacred - Citizen Soldier";
+songs_dict["Janre"] = "none";
 songs_dict["Ma"] = "none";
 songs_dict["Hannah"] = "none";
-songs_dict["Pa"] = "Spirit Lead Me Lyrics - Michael Ketterer";
+songs_dict["Pa"] = "none";
 
 
 function getRandomImage(imgAr, num_random_img, elements, element_num) {

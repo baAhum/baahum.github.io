@@ -415,10 +415,12 @@ p {
 
 .note .letterPhoto {
     max-width: 100%;
+    max-height: none;
 }
 
 .imagediv .letterPhoto {
     max-width: 216.7%;
+    max-height: none;
 }
 
 .MarneMemories .letterPhoto {
