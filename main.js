@@ -98,10 +98,11 @@ function PlayFriendAudio(clicked_id){
         audioName.innerHTML = newSong;
         audioEl.play();
         audioIco.setAttribute('src', './Icons/pause.svg');
-    } else {
-        audioName.innerHTML = "No Song Selected";
-        audioIco.setAttribute('src', './Icons/play.svg');
-    }
+    } 
+    // else {
+    //     audioName.innerHTML = "No Song Selected";
+    //     audioIco.setAttribute('src', './Icons/play.svg');
+    // }
 }
 
 // function Setup(){
