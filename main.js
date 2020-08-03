@@ -74,9 +74,10 @@ setInterval(function() {
 
 function audioControls(){
     if (newSong=="none") {
-        audioEl.pause();
-        audioName.innerHTML = "No Song Selected";
-        audioIco.setAttribute('src', './Icons/play.svg');
+        newSong="none";
+        // audioEl.pause();
+        // audioName.innerHTML = "No Song Selected";
+        // audioIco.setAttribute('src', './Icons/play.svg');
     } else {
         if(audioIco.getAttribute('src')=='./Icons/play.svg') {
             audioName.innerHTML = newSong;
