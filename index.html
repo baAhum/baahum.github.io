@@ -11,7 +11,7 @@
 <body>
   <!-- id="bodyMain" onload="Setup()">. -->
   <audio id="songs">
-    <source src="./songs/Wild Heart - Daughtry.m4a" type="audio/m4a">
+    <source src="./songs/Matt.m4a" type="audio/m4a">
     Your browser does not support the audio element.
   </audio>
 
@@ -53,7 +53,7 @@
   </div>
 
   <div id = "innerBody">
-    <div id = "Intro" class="Message" style="padding-top: 80px; padding-bottom: 80px; text-align: center; ">
+    <div id = "Intro" class="Message" style="padding-top: 80px; padding-bottom: 80px; text-align: center; " onclick="PlayFriendAudio(this.id)">
       <h1>Liefste Marné</h1>
       <p>Hier is 'n klomp handgeskrewe liefdes briewe vir jou, om te wys hoe ongelooflik jy is en hoe baie jy waardeer word in elkeen se eie spesiale manier.  Jy is die lig in ons almal se lewens en jou glimlag straal hoop en liefde vanuit jou Jesus-lig, na almal toe!</p>
       <p>Hoop jou dag is so ongelooflik soos wat jy elke een van ons se lewens maak.
@@ -192,16 +192,5 @@
 
 
   <script type="text/javascript" src="main.js"></script>
-
-  <script>
-    function ready() {
-      PlayFriendAudio('MarneSong1');
-      setTimeout(() => {audioControls();}, 2000);
-      setTimeout(() => {audioControls();}, 2000);
-      
-    }
-  
-    document.addEventListener("DOMContentLoaded", ready);
-  </script>
 </body>
 </html>
