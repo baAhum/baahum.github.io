@@ -15,7 +15,7 @@ var newSong = "none";
 var songs_dict = new Object();
 
 songs_dict["Intro"] = "Wild Heart - Daughtry";
-songs_dict["Gallery"] = "Wild Heart - Daughtry";
+songs_dict["Gallery"] = "Love Story - Taylor Swift";
 songs_dict["Charlize"] = "none";
 songs_dict["Symeion"] = "Always Be Together - Little Mix";
 songs_dict["Matt"] = "Just The Way You Are - Bruno Mars";
