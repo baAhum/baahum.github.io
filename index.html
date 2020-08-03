@@ -195,7 +195,9 @@
 
   <script>
     function ready() {
-      setTimeout(() => { PlayFriendAudio('MarneSong1'); }, 2000);
+      PlayFriendAudio('MarneSong1');
+      setTimeout(() => {audioControls();}, 500);
+      setTimeout(() => {audioControls();}, 2000);
       
     }
   
