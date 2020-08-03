@@ -73,12 +73,12 @@ setInterval(function() {
 }, 2200);
 
 function audioControls(){
-    if (newSong=="none") {
-        newSong="none";
+    // if (newSong=="none") {
+    //     newSong="none";
         // audioEl.pause();
         // audioName.innerHTML = "No Song Selected";
         // audioIco.setAttribute('src', './Icons/play.svg');
-    } else {
+    // } else {
         if(audioIco.getAttribute('src')=='./Icons/play.svg') {
             audioName.innerHTML = newSong;
             audioEl.play();
@@ -87,11 +87,11 @@ function audioControls(){
             audioEl.pause();
             audioIco.setAttribute('src', './Icons/play.svg');
         }
-    }
+    // }
 }
 
 function PlayFriendAudio(clicked_id){
-    audioEl.pause();
+    // audioEl.pause();
     newSong = songs_dict[clicked_id];
     if (newSong!="none") {
         audioEl.setAttribute('src', './songs/'+newSong+'.m4a');
