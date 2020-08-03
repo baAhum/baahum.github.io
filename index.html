@@ -8,7 +8,7 @@
 
 	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
-<body onload="PlayFriendAudio('MarneSong1')">
+<body>
   <!-- id="bodyMain" onload="Setup()">. -->
   <audio id="songs">
     <source src="./songs/Matt.m4a" type="audio/m4a">
@@ -192,5 +192,13 @@
 
 
   <script type="text/javascript" src="main.js"></script>
+
+  <script>
+    function ready() {
+      PlayFriendAudio('MarneSong1');
+    }
+  
+    document.addEventListener("DOMContentLoaded", ready);
+  </script>
 </body>
 </html>
