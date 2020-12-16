@@ -1,0 +1,19 @@
+#vid_foreground {
+    width: 100%;
+}
+
+#bgvid { 
+  position: absolute;
+  min-width: 100%;
+  min-height: 150%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  /* background: url(polina.jpg) no-repeat; */
+  background-size: cover; 
+  background-size: 100% 100%;
+  opacity: 0.4;
+
+  z-index: -1000;
+}
+

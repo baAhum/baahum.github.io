@@ -1,199 +1,114 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Happy B-Day</title>
-    <link rel="icon" href="./Icons/barIco.svg" type="image/svg+xml" sizes="50x16">
+    <title>GlimmerNGloss</title>
+    <link rel="icon" href="./resources/images/Logo.png" type="image/png" sizes="50x16">
     <meta name="theme-color" content="#000">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-	<link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/home.css">
+    <link rel="stylesheet" type="text/css" href="./css/dropdown.css">
+    
 </head>
 <body>
-  <!-- id="bodyMain" onload="Setup()">. -->
-  <audio id="songs">
-    <source src="./songs/Matt.m4a" type="audio/m4a">
-    Your browser does not support the audio element.
-  </audio>
-
-  <div class="navbar unselectable">
-    <a href="#Intro">Our Message</a>
-
-    <div class="dropdown">
-      <button class="dropbtn">Friends 
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="#Hannah">Hannah</a>
-          <a href="#Charlize">Charlize</a>
-          <!-- <a href="#Elize">Elize</a> -->
-          <!-- <a href="#Francois">Francois</a> -->
-          <a href="#Symeion">Symeion</a>
-          <a href="#Ruach">Ruach</a>
-          <a href="#Wian">Wian</a>
-          <a href="#Matt">Matt</a>
+    <div id="header">
+        <h2><img id="imgheader" src="./resources/images/LogoTop.png" alt="Glimmer N Gloss"></h2>
+        <!-- <p>Scroll down to see the sticky effect.</p> -->
       </div>
-    </div> 
-    <div class="dropdown">
-      <button class="dropbtn">Family 
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="#Janre">Janré</a>
-          <!-- <a href="#Tannie">Tannie</a> -->
-          <a href="#Ma">Ma</a>
-          <a href="#Pa">Pa</a>
-      </div>
-    </div> 
-    <a href="#Gallery"">Marné Gallery</a>
+        
+        <nav>
+        <ul id="nav">
+            <li><img id="navimg" src="./resources/images/SideLogo.png" alt="Glimmer N Gloss"></li>
+            
+            <li>
+                <a id="home" href="#">Home</a>
+            </li>
+            <li>
+                <a id="gallery" href="#">Gallery</a>
+            </li>
+            <li class="dropdown dropdown-2">
+                <a id="shop" class="dropbtn"  href="#">Shop      <i class="fa fa-angle-down"></i></a>
 
-    <div id="audioDiv">
-      <a>Song:</a><marquee id="audioDesc" behavior="scroll" direction="left">No Song Selected</marquee>
-      <div id="playPause" onclick="audioControls()"><img id="audioIco" src="./Icons/play.svg" alt="Play"></div>
-    </div>
-  </div>
+                <ul class="dropdown_menu dropdown_menu-2">
+                    <li id="sh-prod" class="dropdown_item-1">Products</li>
+                    <li id="sh-serv" class="dropdown_item-2">Services</li>
+                    <li id="sh-so" class="dropdown_item-3">Special Occasion</li>
+                    <!-- <a href="#shop-so"> -->
+                  </ul>
+            </li>
+            <li>
+                <a id="services" href="#">Services</a>
+            </li>
+            <li>
+                <a id="tutorials" href="#">Tutorials</a>
+            </li>
+            <li>
+                <a id="contact" href="#">Contact Us</a>
+            </li>
+        </ul>
+    </nav>
+      <!-- </div> -->
 
-  <div id = "innerBody">
-    <div id = "Intro" class="Message" style="padding-top: 80px; padding-bottom: 80px; text-align: center; " onclick="PlayFriendAudio(this.id)">
-      <h1>Liefste Marné</h1>
-      <p>Hier is 'n klomp handgeskrewe liefdes briewe vir jou, om te wys hoe ongelooflik jy is en hoe baie jy waardeer word in elkeen se eie spesiale manier.  Jy is die lig in ons almal se lewens en jou glimlag straal hoop en liefde vanuit jou Jesus-lig, na almal toe!</p>
-      <p>Hoop jou dag is so ongelooflik soos wat jy elke een van ons se lewens maak.
-      </p>
-      <img id="MarneMain" src="./photos/Marne.png" alt="Marne Photo">
-      <!-- <div class="imagediv rightF" style="background-image: url('./photos/Matt.png');"></div>
-      <div class="note" style="background-image: url('./letters/Matt.png');"></div> -->
-    </div>
+      <!-- Add scrolling background (Maybe stars like logo, or here by S what she wants) -->
+    <div id="innerBody">
+        <div id="welcome_banner">
+            
+            <!-- <iframe width=100% height="300px" src="https://www.youtube.com/embed/kJQP7kiw5Fk?controls=0" frameborder="0" allow="accelerometer; autoplay; modestbranding; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        </div>
+        <!-- At Symeion's request, here comes a welcome banner for her website. -->
+       <div id="vid_foreground">
+        <!-- <iframe src="https://www.youtube.com/embed/uNRGWVJ10gQ?controls=0;rel=0&amp;autoplay=1&mute=1&showinfo=0" width=100% height="300px" frameborder="0" control="0" allowfullscreen></iframe> -->
+        <video playsinline autoplay muted loop poster="./resources/images/Logo.png" id="bgvid">
+            <source src="./video/introvid.mp4" type="video/mp4">
+        </video>
+       </div>
+       <!-- Have this draw the videos from youtube and play it that way, then you save data and can set the quality up or down. -->
+       <div id="servicescont" class="multi_banner"></div>
+       
+       <div id="client_reviews"></div>
+       <!-- This is where comments for clients will be shown, the idea of this is for it to featured and fun, and clients can see their own comments come up here -->
+        <!-- Maybe add the client's face/nails/bride/matric dance look, with their explicit permission.  Maybe an upload point for those who want? -->
+
+        <div id="located_cont"></div>
+        <!-- Where are we located, and where are we willing to go, maybe leave this one out, and only under contact us. -->
+
+        <div id="links_cont"></div>
+        <!-- Have a youtube link, facebook, maybe a tik tok, instagram, and a pintrest? -->
+
+        <div id="contactUs"></div>
+        <!-- This is nice like tammy Taylor's site -->
+
+        <div id="matt_add_bar"></div>
+        <!-- Just an add bar for you to show who made the website like Korai did -->
 
 
-    <!-- Far Friends -->
+       <div id="productscont" class="multi_banner"></div>
 
-    <div id = "Hannah"  class="Message" onclick="PlayFriendAudio(this.id)">
-      <div class="note" style="background-image: url('./letters/Hannah.png');">
-        <img class="letterPhoto" src="./letters/Hannah.png" alt="Hannah Letter">
-      </div>
-      <div class="imagediv leftF" style="background-image: url('./photos/Hannah.png');">
-        <img class="letterPhoto" src="./letters/Hannah.png" alt="Hannah Photo">
-      </div>
-    </div>
-
-
-    <!-- Pta Friends -->
-
-    <div id = "Charlize"  class="Message" onclick="PlayFriendAudio(this.id)">
-      <div class="note" style="background-image: url('./letters/Charlize.png');">
-        <img class="letterPhoto" src="./letters/Charlize.png" alt="Charlize Letter">
-      </div>
-      <div class="imagediv rightF" style="background-image: url('./photos/Charlize.png');">
-        <img class="letterPhoto" src="./letters/Charlize.png" alt="Charlize Photo">
-      </div>
     </div>
 
-    <!-- <div id = "Elize"  class="Message"></div> -->
-
+    <!-- Add a store -> Services, products, workshops etc, comicon etc
+        , a gallery -> Videos, nail art, hair, some special effect, of people having fun at workshop
+        , different products -> So brushes etc.  Make it easy for Symeion to add more products if she wishes
+        , different services -> Workshops, weddings, matric farewell etc
+        , about -> Related services (cakes), photography.  Maybe an email server as well? Or just using Afrihost?  
+        Maybe available scheduler (might mean I need to learn firebase)
     
-    
+        Don't forget about security and stuff -> Maybe rent a server with this already built in?
 
-     <div id = "Symeion"  class="Message" onclick="PlayFriendAudio(this.id)">
-      <div class="note" style="background-image: url('./letters/Symeion.png');">
-        <img class="letterPhoto" src="./letters/Symeion.png" alt="Symeion Letter">
-      </div>
-      <div class="imagediv leftF" style="background-image: url('./photos/Symeion.png');">
-        <img class="letterPhoto" src="./letters/Symeion.png" alt="Symeion Photo">
-      </div>
-     </div>
-
-     <div id = "Ruach"  class="Message" onclick="PlayFriendAudio(this.id)">
-      <div class="note" style="background-image: url('./letters/Ruach.png');">
-        <img class="letterPhoto" src="./letters/Ruach.png" alt="Ruach Letter">
-      </div>
-      <div class="imagediv rightF" style="background-image: url('./photos/Ruach.png');">
-        <img class="letterPhoto" src="./letters/Ruach.png" alt="Ruach Photo">
-      </div>
-    </div>
-
-    <div id = "Wian"  class="Message" onclick="PlayFriendAudio(this.id)">
-      <div class="note" style="background-image: url('./letters/Wian.png');">
-        <img class="letterPhoto" src="./letters/Wian.png" alt="Wian Letter">
-      </div>
-      <div class="imagediv leftF" style="background-image: url('./photos/Wian.png');">
-        <img class="letterPhoto" src="./letters/Wian.png" alt="Wian Photo">
-      </div>
-    </div>
-
-    <div id = "Matt"  class="Message" onclick="PlayFriendAudio(this.id)">
-      <div class="note" style="background-image: url('./letters/Matt.png');">
-        <img class="letterPhoto" src="./letters/Matt.png" alt="Matt Letter">
-      </div>
-      <div class="imagediv rightF" style="background-image: url('./photos/Matt.png');">
-        <img class="letterPhoto" src="./letters/Matt.png" alt="Matt Photo">
-      </div>
-      <!-- <div class="wePhoto"><img src="./photos/Matt.png" alt="Marne Photo" style="opacity: 1;"></div>
-      <div class="letterPhoto"><img src="./letters/Matt.png" alt="Marne Photo" style="opacity: 1;"></div> -->
-    </div>
-
-    <!-- Family -->
-
-    <div id = "Janre"  class="Message" onclick="PlayFriendAudio(this.id)">
-      <div class="note" style="background-image: url('./letters/Janre.png');">
-        <img class="letterPhoto" src="./letters/Janre.png" alt="Janre Letter">
-      </div>
-      <div class="imagediv leftF" style="background-image: url('./photos/Janre.png');">
-        <img class="letterPhoto" src="./letters/Janre.png" alt="Janre Photo">
-      </div>
-    </div>
-
-    <!-- <div id = "Tannie"  class="Message"></div> -->
-
-    <div id = "Ma" class="Message" onclick="PlayFriendAudio(this.id)">
-      <div class="note" style="background-image: url('./letters/Ma.png');">
-        <img class="letterPhoto" src="./letters/Ma.png" alt="Ma Letter">
-      </div>
-      <div class="imagediv rightF" style="background-image: url('./photos/Ma.png');">
-        <img class="letterPhoto" src="./letters/Ma.png" alt="Ma Photo">
-      </div>
-    </div>
-
-    <div id = "Pa" class="Message" onclick="PlayFriendAudio(this.id)">
-      <div class="note" style="background-image: url('./letters/Pa.png');">
-        <img class="letterPhoto" src="./letters/Pa.png" alt="Pa Letter">
-      </div>
-      <div class="imagediv leftF" style="background-image: url('./photos/Pa.png');">
-        <img class="letterPhoto" src="./letters/Pa.png" alt="Pa Photo">
-      </div>
-    </div>
-    
-    <div id="Gallery" onclick="PlayFriendAudio(this.id)">
-      <p>Geluk met jou <b>19de</b>, hier is 'n paar memories vir jou ;).</p>
-      <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_70.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Marne Photo"></div>
-      <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_24.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Marne Photo"></div>
-      <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_31.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Marne Photo"></div>
-      <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_88.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Marne Photo"></div>
-      <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_25.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Marne Photo"></div>
-      <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_80.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Marne Photo"></div>
-      <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_44.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Marne Photo"></div>
-      <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_62.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Marne Photo"></div>
-      <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_49.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Marne Photo"></div>
-      <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_27.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Marne Photo"></div>
-      <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_35.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Marne Photo"></div>
-      <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_55.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Marne Photo"></div>
-      <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_29.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Marne Photo"></div>
-      <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_18.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Marne Photo"></div>
-      <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_7.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Marne Photo"></div>
-      <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_12.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Marne Photo"></div>
-      <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_84.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Marne Photo"></div>
-      <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_21.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Marne Photo"></div>
-      <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_30.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Marne Photo"></div>
-      <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_72.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Marne Photo"></div>
-      <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_48.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Marne Photo"></div>
-      <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_1.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Marne Photo"></div>
-      <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_59.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Marne Photo"></div>
-      <div class="MarneMemories" style="background-image: url(&quot;./MarneOnly/Marne_77.png&quot;);"><img class="letterPhoto" src="./MarneOnly/Marne_87.png" alt="Marne Photo"></div>
-    </div>
-    
-  <h1>Groete, Die Mense wie omgee oor jou.</h1>
-    
-  </div>
+        Maybe make it able to communicate with an android and iphone app.  Just use flutter, then it will do both
+    -->
 
 
-  <script type="text/javascript" src="main.js"></script>
+    <!-- Banner with 'show' of stuff -->
+
+
+
+
+  <script type="text/javascript" src="./js/main.js"></script>
 </body>
 </html>
