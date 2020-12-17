@@ -23,6 +23,7 @@ body {
     margin: 0;
     padding:0;
     min-width: 1000px;
+    overflow-x: hidden;
 }
 html {
     padding: 0;
