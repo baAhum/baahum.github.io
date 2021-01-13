@@ -35,7 +35,7 @@ nav {
     position: absolute;
     top: 100%;
     left: 0;
-    width: 100%;
+    width: 110%;
     perspective: 1000px;
     z-index: -1;
 

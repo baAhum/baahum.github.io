@@ -11,6 +11,12 @@
     --fontSizeHov: 17px;
   }
 
+
+  @font-face {
+    font-family: "FancyFont";
+    src: url("/resources/fonts/DancingScript-VariableFont_wght.ttf") format("opentype");
+    }
+
 img, a {
   -webkit-user-drag: none;
     -khtml-user-drag: none;
