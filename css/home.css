@@ -19,7 +19,16 @@
 }
 
 #welcome_banner {
-  padding-top: 50px;
+  /* padding-top: 200px; */
+  height: 500px;
+  background-color: #f872b591;
+  background-image: url("/resources/images/3.png");
+  object-fit: fill;
+  opacity: 0;
+  background-size: 100%;
+  font-family: "FancyFont", cursive;
+  font-size: 60px;
+  text-align: center;
 }
 
 #homeDiv {
@@ -34,10 +43,11 @@
   height: 400px;
   background-color: var(--blockfocus);
 
-  padding-left: 2.5%;
-  padding-right: 1%;
+  /* background-image: url("/resources/images/4.jpg"); */
 
-  /* padding-bottom: 10%; */
+  background-size: 100%;
+  /* opacity: 0.8; */
+  object-fit: cover;
 
   overflow: hidden;
 
@@ -51,15 +61,33 @@
     -khtml-user-drag: none;
     -moz-user-drag: none;
     -o-user-drag: none;
+
+
+}
+
+.wrapper {
+  height: 400px;
+  overflow: hidden;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 
 .image_review {
-  height: 77%;
+  height: 308px;
   width: 30%;
-  background-color: aqua;
-  background: aqua;
-  float: left;
+  background-color:var(--txtHovCol);
+  background: var(--txtHovCol);
+  border-radius: 7px;
+  
+  display: inline-block;
+	clear: left;
+	vertical-align: top;
+	position: relative;
+	overflow: hidden;
+  
 
   margin-right: 3%;
 
@@ -78,7 +106,7 @@
 .image_review .innerMessage {
   width:0;
   height: 100%;
-  background: #f0419891;
+  background: #f7a3cd91;
   opacity: 0;
 }
 
@@ -91,6 +119,7 @@
 .innerMessage div {
   padding: 10px;
   opacity: 1;
+  font-weight: 500;
 }
 
 .innerMessage {
@@ -209,7 +238,7 @@
   color: var(--txtHovCol);
   cursor: pointer;
 
-8,}
+}
 
 .varib li:hover {
   color: var(--txtBaseCol);

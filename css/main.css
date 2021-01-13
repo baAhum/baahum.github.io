@@ -26,6 +26,9 @@ img, a {
 
 body {
     background: var(--bodyBack);
+    background-image: url("/resources/images/4.jpg");
+    object-fit: fill;
+    background-size: 100%;
     margin: 0;
     padding:0;
     min-width: 1000px;
