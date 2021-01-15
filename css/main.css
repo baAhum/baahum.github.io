@@ -136,6 +136,7 @@ h2 {
     -khtml-user-drag: none;
     -moz-user-drag: none;
     -o-user-drag: none;
+    z-index: 5;
 }
 
 #navimg {
