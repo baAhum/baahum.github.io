@@ -136,7 +136,7 @@
   height: 100%;
   background: #f7a3cd91;
   opacity: 0;
-  transition: width 0.4s ease-in-out 0.2s, opacity 0.5s linear;
+  transition: width 0.4s ease-in-out, opacity 0.5s linear;
 }
 
 .image_review:hover .slideout {
