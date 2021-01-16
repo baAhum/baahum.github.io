@@ -23,9 +23,10 @@
   height: 500px;
   background-color: #f872b591;
   background-image: url("/resources/images/3.png");
-  object-fit: fill;
+  object-fit: cover;
   opacity: 1;
-  background-size: 100%;
+  background-repeat:no-repeat;
+  background-position: center;
   font-family: "FancyFont", cursive;
   font-size: 60px;
   text-align: center;
@@ -68,10 +69,17 @@
 .wrapper {
   height: 400px;
   overflow: hidden;
+  /* padding-top: 50px; */
   width: 90%;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  font-family: "FancyFont", cursive;
+  font-size: 30px;
+}
+
+.wrapper h3 {
+  margin: 4px 0;
 }
 
 
@@ -94,14 +102,14 @@
   min-width: 300px;
   max-width: 320px;
 
-  margin-bottom: 4%;
-  margin-top: 2.5%;
+  margin-bottom: 100px;
+
 
   object-fit: fill;
 
   background-size: 100%;
 
-  
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   
 }
 
@@ -121,7 +129,6 @@
 .innerMessage {
   text-align: center;
   justify-content: center;
-  font-family: "FancyFont", cursive;
   font-size: 30px;
 }
 
@@ -131,7 +138,7 @@
 
 /* Options for gallery cards */
 
-.image_review .slideout {
+/* .image_review .slideout {
   width:0;
   height: 100%;
   background: #f7a3cd91;
@@ -142,9 +149,9 @@
 .image_review:hover .slideout {
   width:100%;
   opacity:0.9;
-}
+} */
 
-.image_review .fade-in {
+.innerMessage {
   width: 100%;
   height: 100%;
   background: #f7a3cd91;
@@ -152,11 +159,15 @@
   transition: all 0.7s ease-in-out;
 }
 
-.image_review:hover .fade-in {
+.image_review:hover .innerMessage {
   opacity: 0.9;
 }
 
-.flip-card-inner {
+#client_reviews:hover .innerMessage {
+  opacity: 0.9;
+}
+
+/* .flip-card-inner {
   position: relative;
   text-align: center;
   height: 100%;
@@ -195,9 +206,7 @@
 }
 
 .flip-card-back {
-  background-color: #f7a3cd91;;
-  /*background-image: url("img_avatar.png");*/
-  /*background-size: 100%;*/
+  background-color: #f7a3cd91;
   -moz-transform: scaleX(-1);
     -o-transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
@@ -205,7 +214,7 @@
     filter: FlipH;
     -ms-filter: "FlipH";
   transform: rotateY(180deg);
-}
+} */
 
 
 
@@ -312,9 +321,14 @@
 
 }
 
-.varib li:hover {
+.varib li:hover a{
   color: var(--txtBaseCol);
   
+}
+
+.varib a {
+  text-decoration: none;
+  color: inherit;
 }
 
 

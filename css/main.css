@@ -28,6 +28,8 @@ body {
     background: var(--bodyBack);
     background-image: url("/resources/images/4.jpg");
     object-fit: fill;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     background-size: 100%;
     margin: 0;
     padding:0;
