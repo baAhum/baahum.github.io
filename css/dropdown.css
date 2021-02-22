@@ -61,9 +61,11 @@ nav {
     font-size: 14px;
     opacity: 0;
     color: var(--txtBaseCol);
+    font-weight: 800px;
+    /* color: white; */
 
-    box-shadow: 0px 0px 5px 1px #eed8e1;
-    background-color: white;
+    box-shadow: 0px 0px 5px 1px var(--txtBaseCol);
+    background-color: var(--bodyBack);
 
     transition: all 0.2s linear;
     text-align: center;
@@ -83,6 +85,7 @@ nav {
   .dropdown_menu li:active {
     background: var(--blockfocus2);
     background-color: var(--blockfocus2);
+    color: var(--bodyBack)
   }
 
   .dropdown_menu li:hover a, .dropdown_menu li:hover{

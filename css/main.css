@@ -1,14 +1,18 @@
 :root {
-    --col2: #ffe7f8;
-    --col1: #f5d5ce;
-    --txtHovCol: #f04198;
-    --txtBaseCol: #383F50;
-    --blockfocus: #ff6cb674;
+    --col2: #FC9396;
+    --col1: #682340;
+    --col3: #94455a;
+    --txtHovCol: #FC9396;
+    --txtBaseCol: #bb6b86;
+    --blockfocus: #bb6b86;
     --blockfocus2: #fdacd4;
-    --bodyBack: white;
+    --bodyBack: black;
 
     --fontSizeStand: 15px;
     --fontSizeHov: 17px;
+
+    --headerColours: linear-gradient(90deg, var(--col1) 0%, var(--col2) 24%,  var(--col3) 50%,  var(--col2) 87%, var(--col1) 100%);
+    --headerColours: linear-gradient(90deg, var(--col1) 10%, var(--col2) 50%,  var(--col1) 90%);
   }
 
 
@@ -16,6 +20,18 @@
     font-family: "FancyFont";
     src: url("/resources/fonts/DancingScript-VariableFont_wght.ttf") format("opentype");
     }
+
+  @font-face {
+    font-family: 'JetBrains Mono', monospace;
+    src: url("/resources/fonts/JetBrainsMono-VariableFont_wght.ttf") format("opentype");
+  }
+
+  @font-face {
+    font-family: 'JetBrains Mono Italic', monospace;
+    src: url("/resources/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf") format("opentype");
+  }
+
+  
 
 img, a {
   -webkit-user-drag: none;
@@ -26,11 +42,13 @@ img, a {
 
 body {
     background: var(--bodyBack);
-    background-image: url("/resources/images/4.jpg");
-    object-fit: fill;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: 100%;
+    /* background-image: url("/resources/images/4.jpg"); */
+    background-image: url("/Design/ImagesExport/Design1/BackgroundGlitter.png");
+    object-fit:cover;
+    background-position: bottom;
+    /* background-attachment: fixed; */
+    /* background-repeat: no-repeat; */
+    /* background-size: 100%; */
     margin: 0;
     padding:0;
     min-width: 1000px;
@@ -42,17 +60,18 @@ html {
 
 #topNav {
     background:rgb(242,197,217);
-    background: linear-gradient(90deg, var(--col1) 0%, var(--col2) 30%, var(--col1) 50%, var(--col2) 80%, var(--col1) 100%);
+    background: var(--headerColours);
     height: 100px;
     overflow: hidden;
 }
 
 #header {
     background:rgb(242,197,217);
-    background: linear-gradient(90deg, var(--col1) 0%, var(--col2) 30%, var(--col1) 50%, var(--col2) 80%, var(--col1) 100%);
+    background: var(--headerColours);
     margin-bottom: 0;
     height: 80px;
-    padding-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     vertical-align: middle;
 
     user-select: none; /* supported by Chrome and Opera */
@@ -106,16 +125,29 @@ h2 {
     padding-top: 60px;
   }
 
-  /* ul {
-      display: block;
-      list-style: none;
-  } */
+  #beforeNav, #afterNav{
+    background-color: var(--bodyBack);
+    border-top: 4px var(--txtBaseCol);
+    border-bottom: 4px var(--txtBaseCol);
+    box-shadow: 0px 10px 6px 15px var(--txtBaseCol);
+    border-style: solid;
+    height: 5px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  #afterNav {
+    display: inline-block;
+    vertical-align: bottom;
+    /* float: none; */
+  }
 
   #nav{
     /* border:1px solid #ccc;
     border-width:1px 0; */
     list-style:none;
-    padding: 10px 0 15px 0;
+    padding: 10px 0 19px 0;
     margin:0;
     min-height: 30px;
     max-height: 30px;
@@ -123,9 +155,10 @@ h2 {
     width: 100%;
     /* overflow: hidden; */
     text-align:center;
-    box-shadow: 0px 4px 7px 0px #eed8e1;
+    box-shadow: 0px 7.5px 7px 0px var(--headerColours);
     background:rgb(242,197,217);
-    background: linear-gradient(90deg, var(--col1) 0%, var(--col2) 30%, var(--col1) 50%, var(--col2) 80%, var(--col1) 100%);
+    background: var(--headerColours);
+    background: black;
 
 
     user-select: none; /* supported by Chrome and Opera */
@@ -139,7 +172,26 @@ h2 {
     -moz-user-drag: none;
     -o-user-drag: none;
     z-index: 5;
+
+    border-bottom: 12px double var(--txtBaseCol );
+    /* outline-style: solid;
+    outline-width: 2px;
+    outline-color: var(--txtBaseCol); */
+    box-shadow: 0px 2px 2px 2px var(--txtBaseCol);
 }
+
+/* #nav:{
+  
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 5px solid #ffea00;
+  
+} */
 
 #navimg {
   position: relative;
@@ -210,14 +262,18 @@ h2 {
 
 #nav > li:hover > a{
     color:var(--txtHovCol);
+    color: var(--col3);
     font-size: var(--fontSizeHov);
+    text-shadow: 0px 0px 2px var(--col2);
 }
 
 #nav > li > a:focus {
     background: var(--blockfocus);
+    text-shadow: 2px 10px var(--blockfocus);
     border-radius: 3px;
     color:#383F50;
-    box-shadow: 5px 0px 5px 0px #eed8e1;
+    color: var(--bodyBack);
+    /* box-shadow: 5px 0px 5px 0px #eed8e1; */
     outline: none;
 }
 
