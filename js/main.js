@@ -13,11 +13,11 @@ function myFunction() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky")
     imgheader.style.opacity = 0;
-    navimg.style.opacity = 100;
+    // navimg.style.opacity = 100;
   } else {
     navbar.classList.remove("sticky");
     imgheader.style.opacity = 100;
-    navimg.style.opacity = 0;
+    // navimg.style.opacity = 0;
   }
 }
 
