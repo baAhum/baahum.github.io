@@ -261,8 +261,8 @@ h2 {
 
 
 #nav > li:hover > a{
-    color:var(--txtHovCol);
-    color: var(--col3);
+    color:var(--txtBaseCol);
+    color: var(--txtHovCol);
     font-size: var(--fontSizeHov);
     text-shadow: 0px 0px 2px var(--col2);
 }
