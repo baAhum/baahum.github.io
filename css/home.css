@@ -19,6 +19,7 @@
 
 #welcome_banner {
   width:100%;
+  
   background-color: var(--bodyBack);
   background-image: url("../resources/images/3.png");
   background-image: url("../Design/ImagesExport/Design1/IntroImage2.png");
@@ -36,11 +37,14 @@
   outline-width: 12px;
   outline-color: var(--txtBaseCol);
 
+  box-shadow: 0 0 0 #000;
+  background-color: var(--bodyBack);
+
 }
 
 #welcome_banner img{
   
-  
+  box-shadow: 0 0 0 #000;
   max-height: 500px;
   width: auto;
   height: auto;
@@ -83,6 +87,12 @@
   background-size: 100%;
   font-weight: 600;
   color: var(--col2);
+
+  transition: opacity linear 0.2s;
+
+  cursor: pointer;
+
+  color: 
 }
 
 .inner_prod_servBanner > div {
@@ -98,6 +108,10 @@
   display: inline-block;
   float:left;
 
+}
+
+.inner_prod_servBanner:hover {
+  opacity: 0.6;
 }
 
 #makeServ {

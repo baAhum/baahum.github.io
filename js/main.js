@@ -11,6 +11,7 @@ var innerBody = document.getElementById("innerBody");
 
 
 function load(e, page, id) {
+  console.log("New Id = " + this.id);
   fetch(page)
   .then(function(response) {
     return response.text();
@@ -25,6 +26,11 @@ function load(e, page, id) {
 function navLoad(e, page) {
   console.log('\t\t\tcase "' + e.id + '":\n\t\t\t\tbreak;')
   load(innerBody, page, e.id);
+}
+
+function subLoad(page, id, subid) {
+  load(innerBody, page, id);
+  //subid is to set the filters
 }
 
 
