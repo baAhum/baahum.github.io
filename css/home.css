@@ -10,7 +10,6 @@
   width: auto;
   height: auto;
   z-index: -100;
-  /* background: url(polina.jpg) no-repeat; */
   background-size: cover; 
   background-size: 100% 100%;
   opacity: 0.4;
@@ -19,12 +18,10 @@
 }
 
 #welcome_banner {
-  /* padding-top: 200px; */
-  /* height: 500px; */
   width:100%;
   background-color: var(--bodyBack);
-  background-image: url("/resources/images/3.png");
-  background-image: url("/Design/ImagesExport/Design1/IntroImage2.png");
+  background-image: url("../resources/images/3.png");
+  background-image: url("../Design/ImagesExport/Design1/IntroImage2.png");
   background-size:contain;
   opacity: 1;
   background-repeat:no-repeat;
@@ -32,25 +29,104 @@
   font-family: "FancyFont", cursive;
   font-size: 60px;
   text-align: center;
+
+  height: 500px;
+  border-bottom: 4px solid var(--txtBaseCol );
+  outline-style: double;
+  outline-width: 12px;
+  outline-color: var(--txtBaseCol);
+
+}
+
+#welcome_banner img{
+  
+  
+  max-height: 500px;
+  width: auto;
+  height: auto;
+}
+
+#dec_welc_banner {
+  width:100%; 
+  height: 50px;
+  margin: 0;
+  margin-top: 12px;
+  background-image: url("../resources/svg/decoration_skirt.svg");
+  background-position: center;
+  background-size: contain;
+  /* object-position: center;
+  object-fit: contain; */
 }
 
 #homeDiv {
   display: block;
 }
 
+
+/* Services Banner */
+
 #servicescont {
   height: 500px;
+  width: 100%;
+  margin-top: 70px;
+  margin-bottom: 70px;
 }
+
+.inner_prod_servBanner {
+  /* width: 30%; */
+  /* background: aqua; */
+  height: 350px;
+  width: 32%; 
+  max-width: 342px;
+  margin: 50px 5px 0 0;
+  background-position:center;
+  background-size: 100%;
+  font-weight: 600;
+  color: var(--col2);
+}
+
+.inner_prod_servBanner > div {
+  margin:0;
+  height:100%;
+  width: 33%;
+  
+  /* height: 116px; */
+  background-repeat: no-repeat;
+  
+  background-size: 150%;
+  background-position-x: center;
+  display: inline-block;
+  float:left;
+
+}
+
+#makeServ {
+  background-position-y: top;
+  background-color: var(--col3);
+  background-image: url("/resources/images/homeMU.png");
+}
+
+#nailServ {
+  background-position-y: center;
+  background-color: var(--col2);
+  background-image: url("/resources/images/homeNails.png");
+}
+
+#workServ {
+  background-position-y: bottom;
+  background-color: var(--col3);
+  background-image: url("/resources/images/homeHair.png");
+}
+
+
+
 
 #client_reviews {
   height: 400px;
   background-color: var(--blockfocus);
   background: var(--headerColours);
 
-  /* background-image: url("/resources/images/4.jpg"); */
-
   background-size: 100%;
-  /* opacity: 0.8; */
   object-fit: cover;
 
   overflow: hidden;
@@ -75,9 +151,8 @@
 }
 
 .wrapper {
-  height: 400px;
+  height: 100%;
   overflow: hidden;
-  /* padding-top: 50px; */
   width: 90%;
   margin-left: auto;
   margin-right: auto;
@@ -90,14 +165,9 @@
   margin: 4px 0;
 }
 
-
-.image_review {
-  height: 308px;
-  width: 30%;
-  /* background-color:var(--txtHovCol);
-  background: var(--txtHovCol); */
-  border-radius: 7px;
+.wrapper > div {
   
+
   display: inline-block;
 	clear: left;
 	vertical-align: top;
@@ -105,136 +175,43 @@
 	overflow: hidden;
   
 
-  margin-right: 3%;
+ 
 
-  min-width: 300px;
-  max-width: 320px;
+  
 
   margin-bottom: 100px;
 
 
   object-fit: fill;
 
-  background-size: 100%;
+  background-size: cover;
+}
+
+.image_review {
+  margin-right: 3%;
+  min-width: 300px;
+  max-width: 320px;
+  
+  border-radius: 7px;
+  
+  height: 308px;
+  width: 30%;
 
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   
 }
 
 
-
-.innerMessage div {
-  padding: 10px;
-  opacity: 1;
-  font-weight: 500;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.innerMessage {
-  text-align: center;
-  justify-content: center;
-  font-size: 30px;
-}
-
-.innerMessage a {
-  font-weight: 600;
-}
-
-/* Options for gallery cards */
-
-/* .image_review .slideout {
-  width:0;
-  height: 100%;
-  background: #f7a3cd91;
-  opacity: 0;
-  transition: width 0.4s ease-in-out, opacity 0.5s linear;
-}
-
-.image_review:hover .slideout {
-  width:100%;
-  opacity:0.9;
-} */
-
-.innerMessage {
-  width: 100%;
-  height: 100%;
-  background: #f7a3cd91;
-  opacity: 0;
-  transition: all 0.7s ease-in-out;
-}
-
-.image_review:hover .innerMessage {
-  opacity: 0.9;
-}
-
 #client_reviews:hover .innerMessage {
   opacity: 0.9;
 }
-
-/* .flip-card-inner {
-  position: relative;
-  text-align: center;
-  height: 100%;
-  width: 100%;
-  transition: transform 0.9s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
-
-.image_review:hover .flip-card-inner{
-  transform: rotateY(180deg);
-}
-
-.image_review:hover .flip-card-back {
-  -webkit-backface-visibility: visible;
-  backface-visibility: visible;
-}
-
-.flip-card-front {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.flip-card-front {
-  background-size: 100%;
-  object-fit: fill;
-}
-
-.flip-card-back {
-  background-color: #f7a3cd91;
-  -moz-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-    filter: FlipH;
-    -ms-filter: "FlipH";
-  transform: rotateY(180deg);
-} */
-
-
-
-
-
-
 
 #contactUs {
   width: 100%;
   height: 240px;
   background-color: var(--col1);
   background-color: var(--bodyBack);
+  background-color: #000000BB;
   padding: 0 ;
   padding-left: 2.5%;
   text-align: center;
@@ -351,9 +328,10 @@
 
 #matt_add_bar {
   width: 100%;
-  background:rgb(242,197,217);
+  background:var(--txtBaseCol);
+  opacity: 0.8;
   /* background: linear-gradient(90deg, var(--col1) 0%, var(--col2) 30%, var(--col1) 50%, var(--col2) 80%, var(--col1) 100%); */
-  height: 50px;
+  height: 25px;
   bottom: 0;
   margin-bottom: 0;
 
@@ -364,7 +342,7 @@
   text-transform: uppercase;
   letter-spacing: 4px;
 
-  padding-top: 32px;
+  padding-top: 16px;
 
   text-align: center;
 }

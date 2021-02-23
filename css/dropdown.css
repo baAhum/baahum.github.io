@@ -78,10 +78,6 @@ nav {
     
   }
 
-  /* .dropdown_menu li a:focus {
-    background-color: var(--blockfocus2);
-  } */
-
   .dropdown_menu li:active {
     background: var(--blockfocus2);
     background-color: var(--blockfocus2);
@@ -128,6 +124,7 @@ nav {
     transform-origin: top center;
     animation: rotateX 500ms 500ms ease-in-out forwards;
   }
+  
   @-moz-keyframes rotateX {
     0% {
       opacity: 0;
