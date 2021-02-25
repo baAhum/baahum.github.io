@@ -83,6 +83,10 @@ html {
     -khtml-user-drag: none;
     -moz-user-drag: none;
     -o-user-drag: none;
+
+    z-index: 4;
+
+    position: relative;
 }
 
 #header img {
@@ -93,6 +97,7 @@ html {
 h2 {
     margin:0;
     text-align: center;
+    z-index: 4;
 }
 
 /* Style the navbar */
@@ -134,6 +139,8 @@ h2 {
     width: 100%;
     margin: 0;
     padding: 0;
+    z-index: 4;
+    position: relative;
   }
 
   #afterNav {
@@ -352,3 +359,82 @@ h2 {
     opacity: 0.9;
   }
 
+  #catnav {
+    list-style:none;
+    padding: 20px 0 0 0;
+    margin:0;
+    margin-top: -6px;
+    margin-bottom: -5px;
+  
+    background: black;
+  
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+  
+   -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+  
+    height: 50px;
+    max-height: 50px;
+    width: 100%;
+    text-align:center;
+    
+    border-bottom: none;
+    box-shadow: 0 2px 10px 10px black;
+    outline: none;
+    z-index: 4;
+
+  }
+  
+  /* #nav, #catnav{
+    
+  
+  
+    
+    box-shadow: 0px 7.5px 7px 0px var(--headerColours);
+    
+  
+  
+    border-bottom: 12px double var(--txtBaseCol );
+    box-shadow: 0px 2px 2px 2px var(--txtBaseCol);
+  } */
+  
+  #catnav > li{
+    position:relative;
+    display:inline;
+    margin-right: 10px;
+    /* top: -25px;
+    left: -2%; */
+  }
+  #catnav > li > a{
+    display:inline-block;
+    padding:10px;
+    font-size: var(--fontSizeStand);
+    transition: all .2s linear;
+    color:var(--txtBaseCol);
+    text-decoration:none;
+    font-weight:bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+    
+  }
+  
+  #catnav.sticky {
+    top: 71px;
+  }
+
+  .sticky_offset {
+    margin-top: 60px;
+  }
+
+  .sticky_offsetS {
+    margin-top: 125px;
+  }
