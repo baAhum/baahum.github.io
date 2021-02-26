@@ -10,8 +10,25 @@ var sticky = navbar.offsetTop;
 
 var innerBody = document.getElementById("innerBody");
 
-var filtVars = ['mu'];
+var filtVars = [];
 
+function chkAll(boolChck) {
+  console.log(boolChck);
+
+  var chckBxs = document.getElementsByClassName("chk-cr");
+
+  for (var i=0; i<(chckBxs.length-1); i++) {
+    if (boolChck) {if(!(chckBxs[i].classList.contains("checkd"))) {chckBxs[i].classList.add("checkd");}}
+    else {if((chckBxs[i].classList.contains("checkd"))) {chckBxs[i].classList.remove("checkd");}}
+  }
+}
+
+function removeItem(itm) {
+  const index = filtVars.indexOf(itm);
+  if (index > -1) {
+    filtVars.splice(index, 1);
+  }
+}
 
 function load(e, page, id) {
   console.log("New Id = " + this.id);
@@ -154,42 +171,46 @@ function startFunction() {
     }
   }
 
-  navLoad(document.getElementById("homeMN"), '/html/home.html');
+  // navLoad(document.getElementById("homeMN"), '/html/home.html');
+  navLoad(document.getElementById("galleryMN"), '/html/gallery.html');
   
 }
 
 function getPage(e) {
   filtVars = []
+  var subId = (this.id).substring(3);
   
   switch(this.id) {
 
     case "galleryMN":
       navLoad(this, '/html/gallery.html');
+      loadFilts('/resources/Clients/list.json');
+      filtFunc(document.getElementById('chk-all'));
       break;
       case "gl-mu":
         subLoad('/html/gallery.html', "galleryMN", "gl-mu");
-        filtVars.push('mu');
         loadFilts('/resources/Clients/list.json');
+        filtFunc(document.getElementById('chk-' + subId));
 				break;
  			case "gl-nails":
         subLoad('/html/gallery.html', "galleryMN", "gl-nails");
-        filtVars.push('nls');
         loadFilts('/resources/Clients/list.json');
+        filtFunc(document.getElementById('chk-' + subId));
 				break;
  			case "gl-hair":
         subLoad('/html/gallery.html', "galleryMN", "gl-hair");
-        filtVars.push('hr');
         loadFilts('/resources/Clients/list.json');
+        filtFunc(document.getElementById('chk-' + subId));
 				break;
  			case "gl-sfx":
         subLoad('/html/gallery.html', "galleryMN", "gl-sfx");
-        filtVars.push('sfx');
         loadFilts('/resources/Clients/list.json');
+        filtFunc(document.getElementById('chk-' + subId));
 				break;
  			case "gl-ws":
         subLoad('/html/gallery.html', "galleryMN", "gl-ws");
-        filtVars.push('ws');
         loadFilts('/resources/Clients/list.json');
+        filtFunc(document.getElementById('chk-' + subId));
 				break;
 
     case "servicesMN":
@@ -235,31 +256,53 @@ function getPage(e) {
 }
 
 function filtFunc(e) {
+
   
-  switch(e.id) {
-    case "chk-mu":
-      filtVars.push('mu');
-      break;
-    case "chk-nls":
-      filtVars.push('nls');
-      break;
-    case "chk-hr":
-      filtVars.push('hr');
-      break;
-    case "chk-sfx":
-      filtVars.push('mu');
-      break;
-    case "chk-ws":
-      filtVars.push('ws');
-      break;
-    case "chk-so":
-      filtVars.push('so');
-      break;
-    default:
-      break;
+  var subId = (e.id).substring(4);
+
+  if (subId == "all") {
     
+    if (e.classList.contains("checkd")) {
+      chkAll(false);
+      filtVars = [];
+    }
+    else {
+      chkAll(true);
+      filtVars.push('mu', 'nls', 'hr', 'sfx', 'so', 'ws');
+    }
+     
+  } else if(e.classList.contains("checkd")) {
+    removeItem(subId);
+  } else {
+    filtVars.push(subId);
   }
+
+  // switch(subId) {
+  //   case "mu":
+      
+  //     filtVars.push('mu');
+  //     break;
+  //   case "nls":
+  //     filtVars.push('nls');
+  //     break;
+  //   case "hr":
+  //     filtVars.push('hr');
+  //     break;
+  //   case "sfx":
+  //     filtVars.push('mu');
+  //     break;
+  //   case "ws":
+  //     filtVars.push('ws');
+  //     break;
+  //   case "so":
+  //     filtVars.push('so');
+  //     break;
+  //   default:
+
+  //     break;
+    
+  // }
   loadFilts('/resources/Clients/list.json');
-  // console.log("Check box id =" + e.id);
+  e.classList.toggle("checkd");
 }
 
