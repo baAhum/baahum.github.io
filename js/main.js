@@ -171,8 +171,8 @@ function startFunction() {
     }
   }
 
-  // navLoad(document.getElementById("homeMN"), '/html/home.html');
-  navLoad(document.getElementById("galleryMN"), '/html/gallery.html');
+  navLoad(document.getElementById("homeMN"), '/html/home.html');
+  // navLoad(document.getElementById("galleryMN"), '/html/gallery.html');
   
 }
 
@@ -184,6 +184,7 @@ function getPage(e) {
 
     case "galleryMN":
       navLoad(this, '/html/gallery.html');
+      filtVars.push('mu', 'nls', 'hr', 'sfx', 'so', 'ws');
       loadFilts('/resources/Clients/list.json');
       filtFunc(document.getElementById('chk-all'));
       break;
